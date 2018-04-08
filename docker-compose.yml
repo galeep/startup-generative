@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  sg-master:
+    build: .
+    image: galeep/sg-master
+    ports:
+      - "8043:8043"
+    container_name: sg_master
+
+
+  sg-node:
+    image: galeep/sg-master
+    depends_on:
+      - sg-master
+    ports:
+      - "8043"
