@@ -224,12 +224,17 @@ function startupify (seed) {
 
     var results = [];
     results.push(commonWord(seed) + "r");
+    results.push(commonWord(seed) + "d");
     results.push(commonWord(seed) + "it");
     results.push(commonWord(seed) + ".io");
     results.push(commonWord(seed) + "ly");
     results.push(commonWord(seed) + "life");
+    results.push(commonWord(seed) + "base");
     results.push(commonWord(seed) + "ify");
+    results.push(commonWord(seed) + "stop");
+    results.push(commonWord(seed) + "spot");
     results.push(commonWord(seed) + "ery");
+    results.push(commonWord(seed) + "ize");
     results.push(commonWord(seed) + "hub");
     results.push(commonWord(seed) + "y");
     results.push(commonWord(seed));
@@ -239,6 +244,7 @@ function startupify (seed) {
     results.push(commonWord(seed) + "str");
     results.push(removeLastVowel(seed));
     results.push(commonWord(seed) + "Now");
+    results.push(commonWord(seed) + "Out");
     results.push(commonWord(seed) + "Link");
     results.push(commonWord(seed) + "in");
     results.push(commonWord(seed) + "able");
@@ -603,7 +609,7 @@ function facebookFor (seed) {
 function makeTest (seed, n) {
     var results = [];
     results.push(startupify(seed) + " was " + seedChoice(seed + 4, bizAdjs) + ", " + seedChoice(seed + 5, bizAdjs) + ", and " + seedChoice(seed + 6, bizAdjs) + ". Ten out of ten!");
-    results.push("I was skeptical at first but " + startupify(seed) + " really came through. They answered all my questions and made the whole experience a plesant one.");
+    results.push("I was skeptical at first but " + startupify(seed) + " really came through. They answered all my questions and made the whole experience a pleasant one.");
     results.push(thanksTo(seed));
     results.push(allMy(seed));
     results.push("One of the biggest challenges we faced after we hit our early goals was how do we stay top-of-mind and keep our users engaged? Enter " + startupify(seed) + ". Problem solved.");
@@ -619,7 +625,7 @@ function makeTest (seed, n) {
     results.push(startupify(seed) + " was excellent - especially relative to other services I tried - and certainly 1000x better than the experiences I had with other providers.");
     results.push(tinderFor(seed));
     results.push(facebookFor(seed));
-    results.push("I have to say I love this idea, it solved a big problem.");
+    results.push("I have to say I love this idea. It solved a big problem.");
     results.push("It feels good to be part of the " + startupify(seed) + " family.");
     results.push("We searched through a lot of providers and plans to find a good fit for our business. " + startupify(seed) + " made it easy to find the right fit for my business and my budget.");
     return someChoices(seed + 12, results, n);
@@ -638,7 +644,9 @@ function ourSponsors(seed) {
     var results = [];
     results.push("Our Sponsors");
     results.push("Our Clients");
-    results.push("Proudly Partenering With");
+    results.push("Our Partners");
+    results.push("Partnering With");
+    results.push("Proudly Partnered With");
     results.push("As Seen On");
     results.push("Current Clients");
     return seedChoice(seed + 13, results);
@@ -648,9 +656,15 @@ function beTheFirst(seed) {
     var results = [];
     results.push("Be the first to try out ");
     results.push("Find out what's next at ");
+    results.push("Be the first to experience ");
+    results.push("Be the first to try ");
+    results.push("Request an invite for ");
+    results.push("Request an invitation for ");
     results.push("Keep up with what's happening at ");
     results.push("Learn more about ");
     results.push("Sign up for ");
+    results.push("Begin your journey with ");
+    results.push("Experience ");
     return seedChoice(seed + 14, results) + startupify(seed);
 }
 
