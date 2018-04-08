@@ -224,24 +224,37 @@ function startupify (seed) {
 
     var results = [];
     results.push(commonWord(seed) + "r");
+    results.push(commonWord(seed) + "d");
     results.push(commonWord(seed) + "it");
     results.push(commonWord(seed) + ".io");
     results.push(commonWord(seed) + "ly");
+    results.push(commonWord(seed) + "ist");
     results.push(commonWord(seed) + "life");
+    results.push(commonWord(seed) + "base");
     results.push(commonWord(seed) + "ify");
+    results.push(commonWord(seed) + "ity");
+    results.push(commonWord(seed) + "ish");
+    results.push(commonWord(seed) + "stack");
+    results.push(commonWord(seed) + "spot");
     results.push(commonWord(seed) + "ery");
+    results.push(commonWord(seed) + "buzz");
+    results.push(commonWord(seed) + "ize");
     results.push(commonWord(seed) + "hub");
     results.push(commonWord(seed) + "y");
-    results.push(commonWord(seed));
+    results.push(commonWord(seed) + "a");
+    results.push(commonWord(seed) + "in");
+    results.push(commonWord(seed) + "iva");
+    results.push(commonWord(seed) + "able");
     results.push(commonWord(seed) + "me");
+    results.push(commonWord(seed));
     results.push("you" + commonWord(seed));
     results.push(commonWord(seed) + "n");
     results.push(commonWord(seed) + "str");
     results.push(removeLastVowel(seed));
     results.push(commonWord(seed) + "Now");
+    results.push(commonWord(seed) + "This");
+    results.push(commonWord(seed) + "Out");
     results.push(commonWord(seed) + "Link");
-    results.push(commonWord(seed) + "in");
-    results.push(commonWord(seed) + "able");
     results.push("Smart" + commonWord(seed));
     results.push(commonWord(seed) + capitalizeFirst(commonWord(seed + 1)));
     return capitalizeFirst(seedChoice(seed + 1, results));
@@ -435,17 +448,17 @@ function theMax (seed) {
 
 function anApp (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return startupify(seed) + " is a different kind of " + seedChoice(seed, nouns) + " app.";
+        return startupify(seed) + " is a new type of " + seedChoice(seed, nouns) + " app.";
     } else {
-        return startupify(seed) + " is a different kind of " + seedChoice(seed, gerunds) + " app.";
+        return startupify(seed) + " is a new type of " + seedChoice(seed, gerunds) + " app.";
     }
 }
 
-function anApp (seed) {
+function kindOfApp (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return startupify(seed) + " is a different kind of " + seedChoice(seed, nouns) + " app.";
+        return startupify(seed) + " is a new kind of " + seedChoice(seed, nouns) + " app.";
     } else {
-        return startupify(seed) + " is a different kind of " + seedChoice(seed, gerunds) + " app.";
+        return startupify(seed) + " is a new kind of " + seedChoice(seed, gerunds) + " app.";
     }
 }
 
@@ -475,7 +488,7 @@ function weUse (seed) {
 
 function gotBetter (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "Buying " + seedChoice(seed, plurals) + " just got a whole lot better…";
+        return "Getting " + seedChoice(seed, plurals) + " just got a whole lot better…";
     } else {
         return capitalizeFirst(seedChoice(seed, gerunds)) + " just got a whole lot better…";
     }
@@ -504,6 +517,7 @@ function makeOpener (seed) {
     results.push(shareAnd(seed));
     results.push(theMax(seed));
     results.push(anApp(seed));
+    results.push(kindOfApp(seed));
     results.push(builtBy(seed));
     results.push(intoCash(seed));
     results.push(weUse(seed));
@@ -516,11 +530,11 @@ function makeOpener (seed) {
 function makeSubDescs (seed) {
     var results = [];
     results.push("What makes " + startupify(seed) + " *? Our commitment to + pursuing excellence at every turn.");
-    results.push("You know what you want, something * that doesn't hold you back. With the latest * technologies, " + startupify(seed) + " has your back.");
+    results.push("You know what you want. Something * that doesn't limit you. With the latest * technologies, " + startupify(seed) + " has your back.");
     results.push("Unlike our competitors, we'll always be + looking for new ways to move forward.");
-    results.push(startupify(seed) + " is * from the ground up. We have * products, * prices, and most of all * service.");
+    results.push(startupify(seed) + " is * from the ground up. We have * products, * prices, and-- most of all-- * service.");
     results.push(startupify(seed) + " is a different kind of startup. We know what it means to be * and will never compromise when it comes to + delivering what you need.");
-    results.push("Includes everything you need, find and buy in a truly * manner.");
+    results.push("Includes everything you need, find, and buy, in a truly * manner.");
     results.push("Our completely * calculator ensures you'll never overpay.");
     results.push("Fits you and your * lifestyle.");
     results.push("Get a complete picture of the * landscape in as little as 60 seconds.");
@@ -570,7 +584,7 @@ function allMy (seed) {
 
 function forMe (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "We’ve tried every " + seedChoice(seed, nouns) + " program available. " + startupify(seed) + " was the easiest to setup & the most effective.";
+        return "We’ve tried every " + seedChoice(seed, nouns) + " program available. " + startupify(seed) + " was the easiest to set up & the most effective.";
     } else {
         return capitalizeFirst(seedChoice(seed, gerunds)) + " apps are not for me. Being recommended by a friend on " + startupify(seed) + " is exactly what I need.";
     }
@@ -580,30 +594,30 @@ function toLearn (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
         return "When I needed a new " + seedChoice(seed, nouns) + " my best friend told me about " + startupify(seed) + ". I gave it a try and was completely thrilled!";
     } else {
-        return startupify(seed) + " is a great idea, I started " + seedChoice(seed, gerunds) + " to learn this skill set! ";
+        return startupify(seed) + " is a great idea. I started " + seedChoice(seed, gerunds) + " to learn this skill set! ";
     }
 }
 
-function tinderFor (seed) {
+function famousAppFor (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return startupify(seed) + " is like Tinder... but for " + seedChoice(seed, plurals) + "!";
+        return startupify(seed) + " is like " + seedChoice(seed, famousApps) + " ... but for " + seedChoice(seed, plurals) + "!";
     } else {
-        return startupify(seed) + " is like Tinder... but for " + seedChoice(seed, gerunds) + "!";
+        return startupify(seed) + " is like " + seedChoice(seed, famousApps) + "... but for " + seedChoice(seed, gerunds) + "!";
     }
 }
 
-function facebookFor (seed) {
+function theFamousApp (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return startupify(seed) + " is the Facebook of " + seedChoice(seed, plurals) + ".";
+        return startupify(seed) + " is the " + seedChoice(seed, famousApps) + " of " + seedChoice(seed, plurals) + ".";
     } else {
-        return startupify(seed) + " is the Facebook of " + seedChoice(seed, gerunds) + ".";
+        return startupify(seed) + " is the " + seedChoice(seed, famousApps) + " of " + seedChoice(seed, gerunds) + ".";
     }
 }
 
 function makeTest (seed, n) {
     var results = [];
     results.push(startupify(seed) + " was " + seedChoice(seed + 4, bizAdjs) + ", " + seedChoice(seed + 5, bizAdjs) + ", and " + seedChoice(seed + 6, bizAdjs) + ". Ten out of ten!");
-    results.push("I was skeptical at first but " + startupify(seed) + " really came through. They answered all my questions and made the whole experience a plesant one.");
+    results.push("I was skeptical at first but " + startupify(seed) + " really came through. They answered all my questions and made the whole experience a pleasant one.");
     results.push(thanksTo(seed));
     results.push(allMy(seed));
     results.push("One of the biggest challenges we faced after we hit our early goals was how do we stay top-of-mind and keep our users engaged? Enter " + startupify(seed) + ". Problem solved.");
@@ -613,15 +627,15 @@ function makeTest (seed, n) {
     results.push("Pure and simple. You guys have nailed it.");
     results.push("I have to say this is probably the best platform I have seen of its kind.");
     results.push("Definitely recommended.  Great experience, which gave us a better perspective and helped to solve several business problems.");
-    results.push(startupify(seed) + " was very useful not only in case of our project but just good basis for every business we would start in the future.");
+    results.push(startupify(seed) + " was very useful not only this project, but just good basis for all of our business going forward.");
     results.push("You shouldn’t think about whether to apply - just do it! It’s an unique opportunity to meet awesome people and change the world!");
     results.push("Once again, " + startupify(seed) + " came through. And even before estimated delivery date! Just impressive! Thank you! You’re awesome!");
     results.push(startupify(seed) + " was excellent - especially relative to other services I tried - and certainly 1000x better than the experiences I had with other providers.");
-    results.push(tinderFor(seed));
-    results.push(facebookFor(seed));
-    results.push("I have to say I love this idea, it solved a big problem.");
+    results.push(famousAppFor(seed));
+    results.push(theFamousApp(seed));
+    results.push("I have to say I love this idea. It solved a big problem.");
     results.push("It feels good to be part of the " + startupify(seed) + " family.");
-    results.push("We searched through a lot of providers and plans to find a good fit for our business. " + startupify(seed) + " made it easy to find the right fit for my business and my budget.");
+    results.push("We searched through a lot of providers and options to find a good fit for our organization. " + startupify(seed) + " made it easy to find the right plan for my business and my budget.");
     return someChoices(seed + 12, results, n);
 }
 
@@ -638,7 +652,9 @@ function ourSponsors(seed) {
     var results = [];
     results.push("Our Sponsors");
     results.push("Our Clients");
-    results.push("Proudly Partenering With");
+    results.push("Our Partners");
+    results.push("Partnering With");
+    results.push("Proudly Partnered With");
     results.push("As Seen On");
     results.push("Current Clients");
     return seedChoice(seed + 13, results);
@@ -648,17 +664,17 @@ function beTheFirst(seed) {
     var results = [];
     results.push("Be the first to try out ");
     results.push("Find out what's next at ");
+    results.push("Be the first to experience ");
+    results.push("Be the first to try ");
+    results.push("Request an invite to ");
+    results.push("Request an invitation to ");
     results.push("Keep up with what's happening at ");
     results.push("Learn more about ");
+    results.push("Get started with ");
     results.push("Sign up for ");
+    results.push("Begin your journey with ");
+    results.push("Experience ");
     return seedChoice(seed + 14, results) + startupify(seed);
 }
-
-
-
-
-
-
-
 
 
