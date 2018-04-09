@@ -1,9 +1,14 @@
 # startup-generative
 
-This attempts to generate an endless stream of random, plausible-sounding startup one-pager sites. 
-Based on the random startup website generator by Mike Bradley and Tiff Zhang. 
+startup-generative attempts to create a stream of random, plausible-sounding startup one-pager sites. This is a (shallow) fork of the random startup website generator by Mike Bradley and Tiff Zhang. 
 
-TODO: 
+### TODO
 - Dynamic fetch of speech parts
 - Fix garish transitions 
-- Modularize
+- Lots of refactoring
+
+### INSTALL
+
+Now with minimal container packaging,
+TL;DR docker-compose build && docker-compose up
+... and go to https://localhost:8043 
