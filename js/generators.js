@@ -576,7 +576,7 @@ function thanksTo (seed) {
 
 function allMy (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "When my " + seedChoice(seed, myBizPeep)" + "s need new " + seedChoice(seed, plurals) + " there's only one word I tell them: " + startupify(seed) + ".";
+        return "When my " + seedChoice(seed, myBizPeep) + "s need new " + seedChoice(seed, plurals) + " there's only one word I tell them: " + startupify(seed) + ".";
     } else {
         return "As a professional in the " + seedChoice(seed, gerunds) + " industry, I tell all my new clients to start out with an account on " + startupify(seed) + ". It puts them miles ahead of the competition and makes my job that much easier!";
     }
