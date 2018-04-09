@@ -122,9 +122,9 @@ var plurals = ["peoples", "histories", "ways", "arts", "worlds", "pieces of info
 // famousApps: like x but for y;  it's the x of y
 var famousApps = ["Uber", "Tinder", "Facebook", "Google", "LinkedIn", "EBay"];
 // myCasualPeep: non-work words with standard plural forms
-var myCasualPeep = ["friend", "relative", "pal", "partner", "best friend", "brother", "sister", "cousin", "daughter". "son", "kid", "mom", "dad", "neighbor"];
+var myCasualPeep = ["friend", "relative", "pal", "partner", "best friend", "brother", "sister", "cousin", "daughter", "son", "kid", "mom", "dad", "neighbor"];
 // myBizPeep: singular, professional words with standard plural forms
-var myBizPeep = ["colleague", "co-worker", "customer", "lead", "client", "manager", "partner", "team member", "investor", "advisor", "executive", "professional". "MVP", "analyst"];
+var myBizPeep = ["colleague", "co-worker", "customer", "lead", "client", "manager", "partner", "team member", "investor", "advisor", "executive", "professional", "MVP", "analyst"];
 
 // This is crazy -- looks like inspVerbs and inspGerunds need to have 
 // the same index to avoid getting surreal results. 
