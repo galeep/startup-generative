@@ -496,9 +496,9 @@ function gotBetter (seed) {
 
 function manageYour (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "Manage your organization's " + seedChoice(seed, plurals) + " online, with our cloud software.";
+        return "Manage your organization's " + seedChoice(seed, plurals) + " online with our cloud software.";
     } else {
-        return "Manage your organization's " + seedChoice(seed, gerunds) + " online, with our cloud software."
+        return "Manage your organization's " + seedChoice(seed, gerunds) + " online with our cloud software."
     }
 }
 
@@ -530,18 +530,19 @@ function makeOpener (seed) {
 function makeSubDescs (seed) {
     var results = [];
     results.push("What makes " + startupify(seed) + " *? Our commitment to + pursuing excellence at every turn.");
-    results.push("You know what you want. Something * that doesn't limit you. With the latest * technologies, " + startupify(seed) + " has your back.");
+    results.push("You know what you want: something * that doesn't limit you. With the latest * technologies, " + startupify(seed) + " has your back.");
     results.push("Unlike our competitors, we'll always be + looking for new ways to move forward.");
     results.push(startupify(seed) + " is * from the ground up. We have * products, * prices, and-- most of all-- * service.");
     results.push(startupify(seed) + " is a different kind of startup. We know what it means to be * and will never compromise when it comes to + delivering what you need.");
-    results.push("Includes everything you need, find, and buy, in a truly * manner.");
+    results.push("Includes everything you need. Find and buy in a truly * manner.");
     results.push("Our completely * calculator ensures you'll never overpay.");
     results.push("Fits you and your * lifestyle.");
     results.push("Get a complete picture of the * landscape in as little as 60 seconds.");
     results.push("Optimize your changes for a truly * impact.");
     results.push("Be the first to see * news in your area.");
-    results.push(startupify(seed) + " is inherently * and community centric. It's time for the * community to have a voice.");
-    results.push("In this market, only the * survive." );
+    // results.push(startupify(seed) + " is inherently * and community centric. It's time for your * community to have a voice.");
+    results.push(startupify(seed) + " is inherently * and community centric. Give your * community a voice.");
+    results.push("In this market, only the * survive.");
     results.push("Worried about what happens next? We've got you covered.");
     results.push("Find out what people are saying using our * tools.");
     results.push("Say goodbye to spreadsheets forever.");
@@ -549,12 +550,12 @@ function makeSubDescs (seed) {
     results.push("Turn Research into a Team Sport.");
     results.push("Welcome to the next generation of * insight and engagement.");
     results.push("Build * relationships with your customers.");
-    results.push("Cut through the clutter and get * results in a fresh & exciting way.");
+    results.push("Cut through the clutter and get * results in a fresh and exciting way.");
     results.push(startupify(seed) + " is easy to use, no matter who you are.");
     results.push(startupify(seed) + " customers love the product and the company. We love them too!");
     results.push("We provide 24x7x365 support with knowledgeable " + startupify(seed) + " staff answering your requests.");
     results.push("Our * information gathering system completes the view of the customer.");
-    results.push("Found in * communities throughout the world.");
+    results.push("Found in * teams throughout the world.");
     results.push("Discover 100% more * content.");
     results.push("Your * workspace evolves your ideas into finished products.");
     results.push("Simply * results for teams of all sizes.");
@@ -576,7 +577,7 @@ function thanksTo (seed) {
 
 function allMy (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "When my " + seedChoice(seed, myBizPeep) + "s need new " + seedChoice(seed, plurals) + " there's only one word I tell them: " + startupify(seed) + ".";
+        return "When my " + seedChoice(seed + 7, myBizPeep) + "s need new " + seedChoice(seed, plurals) + " there's only one word I tell them: " + startupify(seed) + ".";
     } else {
         return "As a professional in the " + seedChoice(seed, gerunds) + " industry, I tell all my new clients to start out with an account on " + startupify(seed) + ". It puts them miles ahead of the competition and makes my job that much easier!";
     }
@@ -586,13 +587,13 @@ function forMe (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
         return "We’ve tried every " + seedChoice(seed, nouns) + " program available. " + startupify(seed) + " was the easiest to set up and the most effective.";
     } else {
-        return capitalizeFirst(seedChoice(seed, gerunds)) + " apps are not for me. Being recommended by my " + seedChoice(seed, myBizPeep) + " on " + startupify(seed) + " is exactly what I need.";
+        return capitalizeFirst(seedChoice(seed, gerunds)) + " apps are not for me. Being recommended by my " + seedChoice(seed + 3, myBizPeep) + " on " + startupify(seed) + " is exactly what I need.";
     }
 }
 
 function toLearn (seed) {
     if (seedChoice(seed, nouns) == commonWord(seed)) {
-        return "When I needed a new " + seedChoice(seed, nouns) + " my " + seedChoice(seed, myAllPeep) + " told me about " + startupify(seed) + ". I gave it a try and was completely thrilled!";
+        return "When I needed a new " + seedChoice(seed, nouns) + " my " + seedChoice(seed + 1, myAllPeep) + " told me about " + startupify(seed) + ". I gave it a try and was completely thrilled!";
     } else {
         return startupify(seed) + " is a great idea. I started " + seedChoice(seed, gerunds) + " to learn this skill set! ";
     }
@@ -620,23 +621,24 @@ function makeTest (seed, n) {
     results.push("I was skeptical at first but " + startupify(seed) + " really came through. They answered all my questions and made the whole experience a pleasant one.");
     results.push(thanksTo(seed));
     results.push(allMy(seed));
-    results.push("One of the biggest challenges we faced after we hit our early goals was how do we stay top-of-mind and keep our " + seedChoice(seed, myBizPeep) + "s engaged? Enter " + startupify(seed) + ". Problem solved.");
-    results.push("Our " + seedChoice(seed, myBizPeep) + "s love " + startupify(seed) + ". We've never seen anything like it!");
+    results.push("One of the biggest challenges we faced after we hit our early goals was how do we stay top-of-mind and keep our " + seedChoice(seed + 4, myBizPeep) + "s engaged? Enter " + startupify(seed) + ". Problem solved.");
+    results.push("Our " + seedChoice(seed + 1, myBizPeep) + "s love " + startupify(seed) + ". We've never seen anything like it!");
     results.push(forMe(seed));
     results.push(toLearn(seed));
     results.push(startupify(seed) + " is the real deal. No doubt about it.");
-    results.push("When our " + seedChoice(seed, myCasualPeep) + " first told us about " + startupify(seed) + ", we were apprehensive. Now we can't imagine doing this any other way!");
+    results.push("When our " + seedChoice(seed + 1, myCasualPeep) + " first told us about " + startupify(seed) + ", we were apprehensive. Now we can't imagine doing this any other way!");
     results.push("Pure and simple. You guys have nailed it.");
     results.push("I have to say " + startupify(seed) + " is probably the best platform I have seen of its kind.");
-    results.push("Definitely recommended.  Great experience, which gave us a better perspective and helped to solve several business problems.");
-    results.push(startupify(seed) + " was very useful not only for this project, but for all our business needs going forward.");
+    results.push("Definitely recommended.  Great experience-- " + startupify(seed) + " gave us a better perspective and helped solve several business problems.");
+    results.push(startupify(seed) + " was very useful for this project, and will be a valuable tool for so many of our business needs going forward.");
     results.push("You shouldn’t think about whether to apply - just do it! It’s an unique opportunity to meet awesome people and change the world!");
     results.push("Once again, " + startupify(seed) + " came through. And even before the estimated delivery date! Just impressive! Thank you! You’re awesome!");
     results.push(startupify(seed) + " was excellent - especially relative to other services I tried - and certainly 1000x better than the experiences I had with other providers.");
     results.push(famousAppFor(seed));
     results.push(theFamousApp(seed));
     results.push("I love this idea. It solved a big problem.");
-    results.push("To be honest, we don't know how we got by before " + startupify(seed) + ".");
+    results.push("(" + startupify(seed) + " is) the most significant disruptor in this space we've seen in a long time. Don't miss out!");
+    results.push("We don't know how we got by before " + startupify(seed) + ".");
     results.push("It feels good to be part of the " + startupify(seed) + " family.");
     results.push("We searched through a lot of providers and options to find a good fit for our organization. " + startupify(seed) + " made it easy to find the right plan for my business and my budget.");
     return someChoices(seed + 12, results, n);
