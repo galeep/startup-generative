@@ -26,10 +26,12 @@ function someChoices(seed, choices, n) {
 
 function verb (seed) {
     return seedChoice(seed, verbs);
+    //return "pay"; 
 }
 
 function noun (seed) {
     return seedChoice(seed, nouns);
+    //return "day"; 
 }
 
 function commonWord (seed) {
@@ -137,7 +139,7 @@ function getColor (seed) {
 }
 
 function getLogo (seed) {
-    var logo;
+    var logo; 
     if (random(seed) < 0.5) {
         // Use Font Awesome
         logo = seedChoice(seed, fontAwesome);
@@ -151,11 +153,11 @@ function getLogo (seed) {
 }
 
 /**
- * Returns an array of team member's photos and stuff.
+ * Returns an array of team member's photos and stuff. 
  */
 function getTeam (seed) {
     var ratio = Math.min(random(seed), random(seed * 2));
-    var size = randomInt(seed * 4, 2, 8);
+    var size = randomInt(seed * 4, 2, 8); 
     var girlCount = Math.floor(size * ratio);
     var guyCount = size - girlCount;
     var girls = someChoices(seed, females, girlCount);
@@ -165,7 +167,7 @@ function getTeam (seed) {
     var results = [];
     var m = 0;
     var f = 0;
-    while (m < guyCount || f < girlCount) {
+    while (m < guyCount || f < girlCount) {   
         if (random(seed * mult + 1) > 0.5 && f < girlCount) {
             // Add the next girl
             var name = femaleName(seed * mult) + " " + lastName(seed * mult + 2);
@@ -215,12 +217,10 @@ function removeLastVowel (seed) {
     }
 }
 
-function startupify (seed,gank=0) {
+function startupify (seed) {
     // We let the user override the startup name by storing it in
     // document.startup_name in index.html.
-    if (gotDiffName != "" && gank == "") {
-           return gotDiffName;
-    }
+    // if (document.startup_name != "") { return document.startup_name; }
 
     var results = [];
     results.push(commonWord(seed) + "r");
@@ -645,20 +645,9 @@ function makeTest (seed, n) {
 }
 
 function getSeedFromURL() {
-    urlUnsplit = window.location.href;
-    url = urlUnsplit.split('#')[0];
+    url = window.location.href;
     var n = url.lastIndexOf('?s=');
     if (n == -1 || isNaN(parseInt(url.substring(n + 3)))) {
-        return "";
-    }
-    return url.substring(n + 3);
-}
-
-function getNameFromURL() {
-    urlUnsplit = window.location.href;
-    url = urlUnsplit.split('#')[0];
-    var n = url.lastIndexOf('&c=');
-    if (n == -1 ) {
         return "";
     }
     return url.substring(n + 3);

@@ -1,12 +1,6 @@
-var Startup = function (s,g) {
-  var seed = s;
-  var gank = g;
-  // Allow the "sponsors" to tell startupify()
-  // not to override the name.
-  // This is g()ross but it will do for now.
-  // FIXME
-  var name = startupify(seed,gank);
-  console.log("this is " + seed + "where it would be set " + gank);
+var Startup = function (s) {
+  var seed = s; 
+  var name = startupify(seed);
   var accent = new Color(getColor(seed * 4));
   accent = accent.deviate(seed * 97, 20);
   var complement = makeComplement(accent);
@@ -42,7 +36,7 @@ var Startup = function (s,g) {
       cursive = false;
     }
     var logoFont = getLogoFont(logoSeed * 13, cursive);
-    var fontSize = Math.max(randomInt(logoSeed * 17, 18, 13),
+    var fontSize = Math.max(randomInt(logoSeed * 17, 18, 13), 
                       randomInt(logoSeed * 19, 20, 13));
     var letterSpacing = randomInt(logoSeed * 23, 15, -15);
     letterSpacing = letterSpacing / 10.0 + "px";
@@ -78,7 +72,7 @@ var Color = function (color, alpha) {
   r = zeroFloor(r);
   g = zeroFloor(g);
   b = zeroFloor(b);
-
+  
   if (alpha != undefined) {
     a = alpha;
   }
@@ -103,7 +97,7 @@ var Color = function (color, alpha) {
     return "#" + s(r.toString(16), 2) + s(g.toString(16), 2) + s(b.toString(16), 2);
   }
 
-  this.rgba = function () {
+  this.rgba = function () { 
     return 'rgba(' + r + ',' + g + ',' + b + ', ' + a + ')';
   }
 

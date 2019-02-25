@@ -2,7 +2,6 @@ var seed = Math.floor(Math.random() * 1000000000000);
 var accent;
 var complement;
 var navTop;
-var gank;
 var topColor = "#fff";
 var currentSite = window.location.href;
 var gotSeed = getSeedFromURL();
@@ -12,10 +11,8 @@ if (gotSeed == "") {
 } else {
   seed = parseInt(gotSeed);
 }
-var gotDiffName = getNameFromURL();
-
 $(document).ready(function() { 
-  var startup = new Startup(seed,gank);
+  var startup = new Startup(seed);
 
   var name = startupify(seed);
 
@@ -213,16 +210,15 @@ $(document).ready(function() {
   sponsorSeed1 = Math.floor(seed * random(seed + 1) + 1000);
   sponsorSeed2 = Math.floor(seed * random(seed * 2 + 7) + 2000);
   sponsorSeed3 = Math.floor(seed * random(seed * 3 + 9) + 3000);
-  var gank = "booop";
-  var sponsor1 = new Startup(sponsorSeed1,gank);
+  var sponsor1 = new Startup(sponsorSeed1);
   $("#slogo1").html(sponsor1.getName);
   $("#slink1").attr("href", siteBase + "?s=" + sponsorSeed1);
   sponsor1.styleLogo("#slogo1");
-  var sponsor2 = new Startup(sponsorSeed2,gank);
+  var sponsor2 = new Startup(sponsorSeed2);
   $("#slogo2").html(sponsor2.getName);
   $("#slink2").attr("href", siteBase + "?s=" + sponsorSeed2);
   sponsor2.styleLogo("#slogo2");
-  var sponsor3 = new Startup(sponsorSeed3,gank);
+  var sponsor3 = new Startup(sponsorSeed3);
   $("#slogo3").html(sponsor3.getName);
   $("#slink3").attr("href", siteBase + "?s=" + sponsorSeed3);
   sponsor3.styleLogo("#slogo3");
